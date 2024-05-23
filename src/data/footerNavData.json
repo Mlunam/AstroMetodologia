@@ -1,0 +1,48 @@
+[
+    {
+        "title": "Template",
+        "items": [
+            {
+                "label": "Features",
+                "href": "#features"
+            },
+            {
+                "label": "Testimonials",
+                "href": "#testimonials"
+            },
+            {
+                "label": "FAQ",
+                "href": "#faq"
+            },
+            {
+                "label": "Dietas",
+                "href": "#dieta"
+            }
+        ]
+    },
+    {
+        "title": "Company",
+        "items": [
+            {
+                "label": "About",
+                "href": "https://github.com/christian-luntok/astro-nutritrack",
+                "target": "_blank"
+            },
+            {
+                "label": "Twitter",
+                "href": "https://github.com/christian-luntok/astro-nutritrack",
+                "target": "_blank"
+            },
+            {
+                "label": "Instagram",
+                "href": "https://github.com/christian-luntok/astro-nutritrack",
+                "target": "_blank"
+            },
+            {
+                "label": "Facebook",
+                "href": "https://github.com/christian-luntok/astro-nutritrack",
+                "target": "_blank"
+            }
+        ]
+    }
+]

@@ -1,0 +1,9 @@
+[
+    { "name": "Más información", "to": "#information", "href": "/#information" },
+    { "name": "Dietas", "to": "#dieta", "href": "/#dieta" },
+    { "name": "Encuesta", "to": "#encuesta", "href": "/#encuesta" },
+    { "name": "Preguntas", "to": "#faq", "href": "/#faq" },
+    { "name": "Calculadora", "to": "#calculator", "href": "/#calculator" }
+
+  
+]

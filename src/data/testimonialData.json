@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Claude Bernard (1813-1878)",
+        "icon": "mdi:account-circle",
+        "content": "Bernard fue uno de los primeros en estudiar la fisiología de la diabetes, demostrando la relación entre el hígado y la producción de glucosa en el cuerpo."
+    },
+    {
+        "id": 2,
+        "title": "Frederick Banting (1891-1941) y Charles Best (1899-1978)",
+        "icon": "mdi:account-circle",
+        "content": "Descubrieron la insulina en 1921, lo que revolucionó el tratamiento de la diabetes al permitir el control de los niveles de azúcar en sangre."
+    },
+    {
+        "id": 3,
+        "title": "Jean Sterne (1907-1997)",
+        "icon": "mdi:account-circle",
+        "content": "Desarrolló el primer medicamento oral para tratar la diabetes en 1957, la tolbutamida, un antidiabético oral que mejoró la calidad de vida de los pacientes."
+    },
+    {
+        "id": 4,
+        "title": "Paul Langerhans (1847-1888)",
+        "icon": "mdi:account-circle",
+        "content": "Descubrió los islotes de Langerhans en el páncreas en 1869, que más tarde se demostró que son la fuente de producción de insulina en el cuerpo."
+    }
+]

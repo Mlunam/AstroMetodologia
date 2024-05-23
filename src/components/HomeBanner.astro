@@ -1,0 +1,51 @@
+---
+import BadgeGroup from "./badge/BadgeGroup.astro";
+import BadgeIcon from "./badge/BadgeIcon.astro";
+import BadgeMessage from "./badge/BadgeMessage.astro";
+import Button from "./button/Button.astro";
+import ButtonGroup from "./button/ButtonGroup.astro";
+import Content from "./Content.astro";
+import SectionContainer from "./SectionContainer.astro";
+import PageTitle from "./PageTitle.astro";
+import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
+import { MotionBTTContainer } from "./motion/MotionBTTContainer.jsx";
+---
+
+<SectionContainer class="page-banner--container py-16">
+    <SectionContainer class="page-banner--inner-container wrap wrap-px z-10">
+        <PageTitle class="text-center mx-auto" type="heavy">
+            Controla tu diabetes
+        </PageTitle>
+        <Content class="text-center" alignment="center">
+            <p>
+                Informate y previene la enfermedad.{" "}
+            </p>
+        </Content>
+        <div class="mt-6 mb-16 text-center">
+            <ButtonGroup alignment="center">
+                <Button href="#information">Más información</Button>
+                <a
+                    role="button"
+                    href="#calculator"
+                    class="btn btn--secondary"
+                >
+                    Calcular IMC
+                    <Icon name="mdi:arrow-right" class="w-6" />
+                </a>
+            </ButtonGroup>
+        </div>
+        <div class="page-banner--image">
+            <Image
+                src={"/images/salad.jpg"}
+                width={1024}
+                height={680}
+                alt={"Page Banner"}
+                objectFit={"cover"}
+                aspectRatio={16 / 9}
+                format={"webp"}
+                class="mx-auto"
+            />
+        </div>
+    </SectionContainer>
+</SectionContainer>

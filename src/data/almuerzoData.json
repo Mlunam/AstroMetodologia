@@ -1,0 +1,25 @@
+[
+  {
+    "id": 10,
+    "title": "Menú 1",
+    "isOpen": false,
+    "content": "12 oz carne de res asada, 1 aguacate, Ensalada de espinaca con aceite de oliva, vaso de agua"
+  },
+  {
+    "id":20,
+    "title": "Menú 2",
+    "isOpen": false,
+    "content": "12 oz pollo a la plancha, verduras salteadas, 10 moras, 1 vaso de Agua"
+  },
+  {
+    "id": 40,
+    "title": "Menú 3",
+    "isOpen": false,
+    "content": "8 onzas de pescado al vapor o limón, media taza de arroz, Ensalada verde, 10 almendras, vaso de Agua"
+  }  ,{
+    "id": 41,
+    "title": "Ejemplos de un plato saludable, se recomienda que,\npara una dieta personalizada y acorde a la persona, que se aboquen a un profesional de la nutrición.",
+    "isOpen": false,
+    "content": ""
+  }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "title": "¿Qué es la diabetes?",
+        "isOpen": false,
+        "content": "La diabetes es una enfermedad crónica que afecta la forma en que el cuerpo utiliza la glucosa en sangre."
+    },
+    {
+        "id": 2,
+        "title": "¿Cuáles son los síntomas de la diabetes?",
+        "isOpen": false,
+        "content": "Los síntomas comunes de la diabetes incluyen aumento de la sed, aumento de la frecuencia urinaria, fatiga y pérdida de peso inexplicable, entre otros."
+    },
+    {
+        "id": 3,
+        "title": "¿Cuáles son los tipos de diabetes?",
+        "isOpen": false,
+        "content": "Los principales tipos de diabetes son la diabetes tipo 1, la diabetes tipo 2 y la diabetes gestacional."
+    },
+    {
+        "id": 4,
+        "title": "¿Cómo se diagnostica la diabetes?",
+        "isOpen": false,
+        "content": "La diabetes se diagnostica mediante pruebas de glucosa en sangre, como la prueba de hemoglobina A1c o la prueba de glucosa en ayunas."
+    },
+    {
+        "id": 5,
+        "title": "¿Cómo se trata la diabetes?",
+        "isOpen": false,
+        "content": "El tratamiento de la diabetes puede incluir cambios en el estilo de vida, medicamentos orales, insulina y otros medicamentos según sea necesario."
+    },
+    {
+        "id": 6,
+        "title": "¿Cuáles son los factores de riesgo para desarrollar diabetes?",
+        "isOpen": false,
+        "content": "Los factores de riesgo incluyen la obesidad, la inactividad física, la dieta poco saludable, la historia familiar de diabetes y la edad avanzada, entre otros."
+    },
+    {
+        "id": 7,
+        "title": "¿Es reversible la diabetes?",
+        "isOpen": false,
+        "content": "La diabetes tipo 1 no es reversible, pero la diabetes tipo 2 puede ser reversible o controlable con cambios en el estilo de vida y tratamiento adecuado."
+    },
+    {
+        "id": 8,
+        "title": "¿Qué es la hipoglucemia?",
+        "isOpen": false,
+        "content": "La hipoglucemia es una condición en la que los niveles de azúcar en sangre son demasiado bajos, lo que puede causar síntomas como sudoración, temblores y confusión."
+    },
+    {
+        "id": 9,
+        "title": "¿Cuál es la importancia de controlar los niveles de azúcar en sangre?",
+        "isOpen": false,
+        "content": "Controlar los niveles de azúcar en sangre es fundamental para prevenir complicaciones a largo plazo de la diabetes, como daño a los nervios, enfermedades cardiovasculares y problemas renales."
+    },
+    {
+        "id": 10,
+        "title": "¿Qué es la retinopatía diabética?",
+        "isOpen": false,
+        "content": "La retinopatía diabética es una complicación ocular de la diabetes que puede causar daño a los vasos sanguíneos en la retina y provocar pérdida de visión."
+    },
+    {
+        "id": 11,
+        "title": "¿Cómo afecta la diabetes al sistema cardiovascular?",
+        "isOpen": false,
+        "content": "La diabetes puede aumentar el riesgo de enfermedades cardiovasculares, como ataques cardíacos y accidentes cerebrovasculares, debido a la afectación de los vasos sanguíneos y los niveles elevados de azúcar en sangre."
+    },
+    {
+        "id": 12,
+        "title": "¿Puede la diabetes afectar la función renal?",
+        "isOpen": false,
+        "content": "Sí, la diabetes puede causar daño a los riñones con el tiempo, lo que se conoce como nefropatía diabética, y puede provocar insuficiencia renal si no se controla adecuadamente."
+    },
+    {
+        "id": 13,
+        "title": "¿Cuál es la relación entre la diabetes y la enfermedad periodontal?",
+        "isOpen": false,
+        "content": "Las personas con diabetes tienen un mayor riesgo de desarrollar enfermedad periodontal debido a la susceptibilidad a las infecciones y a la dificultad para combatir las bacterias en la boca."
+    },
+    {
+        "id": 14,
+        "title": "¿Es seguro el embarazo con diabetes?",
+        "isOpen": false,
+        "content": "El embarazo en mujeres con diabetes puede ser seguro con un control cuidadoso de los niveles de azúcar en sangre y una atención médica adecuada, pero requiere una monitorización más intensiva."
+    },
+    {
+        "id": 15,
+        "title": "¿Cómo pueden los familiares apoyar a alguien con diabetes?",
+        "isOpen": false,
+        "content": "Los familiares pueden ayudar a alguien con diabetes brindando apoyo emocional, participando en cambios en el estilo de vida, aprendiendo sobre la enfermedad y siendo solidarios en el manejo de la diabetes."
+    }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Menú 1",
+    "isOpen": false,
+    "content": "2 huevos al gusto, 1 aguacate, Ensalada de espinaca, taza de café sin azúcar"
+  },
+  {
+    "id": 2,
+    "title": "Menú 2",
+    "isOpen": false,
+    "content": "2 huevos con espinaca, ½ taza de frijol, 1 manzana, 1 vaso de Agua"
+  },
+  {
+    "id": 3,
+    "title": "Menú 3",
+    "isOpen": false,
+    "content": "8 onzas de pollo, 1 taza de Ensalada verde, 10 uvas, 10 semillas de marañón, vaso de Agua"
+  },
+  {
+    "id": 44,
+    "title": "Ejemplos de un plato saludable, se recomienda que,\npara una dieta personalizada y acorde a la persona, que se aboquen a un profesional de la nutrición.",
+    "isOpen": false,
+    "content": ""
+  }
+]

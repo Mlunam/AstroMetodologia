@@ -1,0 +1,108 @@
+---
+---
+
+<style>
+
+</style>
+
+<div class="input-group flex flex-col gap-4">
+    <label for="peso" class="text-xl mb-2 font-medium text-black">Peso (libras)</label>
+    <input
+            type="number"
+            id="peso"
+            class="input px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            placeholder="Libras"
+            autocomplete="off"
+            inputmode="decimal"
+            step="0.01"
+    />
+    <label for="altura" class="text-xl mb-2 font-medium text-black">Altura (metros)</label>
+    <input
+            type="number"
+            id="altura"
+            class="input px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            placeholder="Metros"
+            autocomplete="off"
+            step="0.01"
+            min="1.0"
+            max="2.8"
+    />
+    <button id="calculate-button" class="btn btn--primary">Calcular IMC</button>
+    <div id="imc-result"></div>
+</div>
+
+<script>
+    const weightInput = document.getElementById('peso');
+    const heightInput = document.getElementById('altura');
+    const calculateButton = document.getElementById('calculate-button');
+    const imcResult = document.getElementById('imc-result');
+
+
+    function calculateIMC(weightInPounds, heightInMeters) {
+        const weightInKilograms = weightInPounds * 0.453592;
+        const bmi = weightInKilograms / (heightInMeters * heightInMeters);
+        let weightStatus = '';
+
+        if (bmi < 18.5) {
+            weightStatus = 'Bajo peso';
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+            weightStatus = 'Normal';
+        } else if (bmi >= 25.0 && bmi <= 29.9) {
+            weightStatus = 'Sobrepeso (no obesidad)';
+        } else if (bmi >= 30.0 && bmi <= 34.9) {
+            weightStatus = 'Obesidad clase 1 (de bajo riesgo)';
+        } else if (bmi >= 35.0 && bmi <= 39.9) {
+            weightStatus = 'Obesidad clase 2 (riesgo moderado)';
+        } else {
+            weightStatus = 'Obesidad clase 3 (de alto riesgo)';
+        }
+
+        return { bmi: bmi.toFixed(2), status: weightStatus };
+    }
+
+    function limitDecimals(event) {
+        let value = event.target.value;
+        if (value.includes('.')) {
+            const parts = value.split('.');
+            if (parts[1].length > 2) {
+                // Si hay más de dos decimales, se limita a dos.
+                event.target.value = parseFloat(value).toFixed(2);
+            }
+        }
+    }
+
+    weightInput.addEventListener('input', limitDecimals);
+    heightInput.addEventListener('input', limitDecimals);
+
+    calculateButton.addEventListener('click', () => {
+        let weightInPounds = parseFloat(weightInput.value);
+        let heightInMeters = parseFloat(heightInput.value);
+
+        // Validación de números
+        if (isNaN(weightInPounds) || isNaN(heightInMeters)) {
+            imcResult.textContent = 'Por favor ingresa valores numéricos.';
+            return;
+        } else if (heightInMeters < 1.0 || heightInMeters > 2.8) {
+            imcResult.textContent = 'La altura debe estar entre 1.0 y 2.8 metros.';
+            return;
+        }
+
+        const { bmi, status } = calculateIMC(weightInPounds, heightInMeters);
+        imcResult.textContent = `Tu Índice de masa corporal es: ${bmi}. Nivel de peso: ${status}`;
+
+
+        weightInput.value = ""
+        heightInput.value = ""
+
+    });
+
+    // Agregar validación de rango mínimo y máximo para la altura
+    heightInput.addEventListener('input', () => {
+        const heightValue = parseFloat(heightInput.value);
+        if (heightValue < 1.0 || heightValue > 2.8) {
+            heightInput.setCustomValidity('La altura debe estar entre 1.0 y 2.8 metros.');
+        } else {
+            heightInput.setCustomValidity('');
+        }
+    });
+</script>

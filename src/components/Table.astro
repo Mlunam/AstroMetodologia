@@ -1,0 +1,546 @@
+---
+import $ from "jquery";
+import SectionContainer from "./SectionContainer.astro";
+import ButtonGroup from "./button/ButtonGroup.astro";
+import Button from "./button/Button.astro";
+import {Icon} from "astro-icon";
+import Content from "./Content.astro";
+---
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .responsive-input{
+       text-align: center;
+
+    }
+
+    .responsive-input > input{
+        width: 7em;
+        background: #FFC56D;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+</style>
+
+
+<SectionContainer
+        class="page-banner--container py-16"
+>
+
+    <div class="table-container overflow-x-auto">
+    <table class="md:table-fixed" id="td_main">
+        <thead>
+        <tr>
+            <th>Día</th>
+            <th>Desayuno</th>
+            <th>Precio Desayuno</th>
+            <th>Almuerzo</th>
+            <th>Precio Almuerzo</th>
+            <th>Cena</th>
+            <th>Precio Cena</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Lunes</td>
+            <td id="lunesDesayuno">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioLunesDesayuno">
+                </div>
+            </td>
+            <td id="lunesAlmuerzo">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioLunesAlmuerzo">
+                </div>
+            </td>
+            <td id="lunesCena">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioLunesCena">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Martes</td>
+            <td id="martesDesayuno">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioMartesDesayuno">
+                </div>
+            </td>
+            <td id="martesAlmuerzo">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioMartesAlmuerzo">
+                </div>
+            </td>
+            <td id="martesCena">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioMartesCena">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Miércoles</td>
+            <td id="miercolesDesayuno">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioMiercolesDesayuno">
+                </div>
+            </td>
+            <td id="miercolesAlmuerzo">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioMiercolesAlmuerzo">
+                </div>
+            </td>
+            <td id="miercolesCena">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioMiercolesCena">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Jueves</td>
+            <td id="juevesDesayuno">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioJuevesDesayuno">
+                </div>
+            </td>
+            <td id="juevesAlmuerzo">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioJuevesAlmuerzo">
+                </div>
+            </td>
+            <td id="juevesCena">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioJuevesCena">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Viernes</td>
+            <td id="viernesDesayuno">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioViernesDesayuno">
+                </div>
+            </td>
+            <td id="viernesAlmuerzo">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioViernesAlmuerzo">
+                </div>
+            </td>
+            <td id="viernesCena">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioViernesCena">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Sábado</td>
+            <td id="sabadoDesayuno">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioSabadoDesayuno">
+                </div>
+            </td>
+            <td id="sabadoAlmuerzo">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioSabadoAlmuerzo">
+                </div>
+            </td>
+            <td id="sabadoCena">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioSabadoCena">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Domingo</td>
+            <td id="domingoDesayuno">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioDomingoDesayuno">
+                </div>
+            </td>
+            <td id="domingoAlmuerzo">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioDomingoAlmuerzo">
+                </div>
+            </td>
+            <td id="domingoCena">
+                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"></select>
+            </td>
+            <td>
+                <div class="responsive-input">
+                    <input type="number" id="precioDomingoCena">
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+    <Content class="text-center" alignment="center">
+        <p id="costoTotal">
+
+        </p>
+    </Content>
+
+    <ButtonGroup alignment="center">
+        <a
+                id="calcularCosto"
+                role="button"
+                class="btn btn--secondary"
+        >
+            Calcular Precio
+            <Icon name="mdi:calculator" class="w-6" />
+        </a>
+    </ButtonGroup>
+</SectionContainer>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Define your JSON data
+        var jsonData = {
+            "options": [
+                {"value": "Aceite de girasol", "text": "Aceite de girasol"},
+                {"value": "Aceite de canola", "text": "Aceite de canola"},
+                {"value": "Aceite de oliva", "text": "Aceite de oliva"},
+                {"value": "Aceite de soja", "text": "Aceite de soja"},
+                {"value": "Aceituna negra sin hueso en salmuera", "text": "Aceituna negra sin hueso en salmuera"},
+                {"value": "Aceituna verde en salmuera", "text": "Aceituna verde en salmuera"},
+                {"value": "Acelga", "text": "Acelga"},
+                {"value": "Aciete de oliva virgen", "text": "Aciete de oliva virgen"},
+                {"value": "Aguacate", "text": "Aguacate"},
+                {"value": "Albaricoque", "text": "Albaricoque"},
+                {"value": "Alcachofas", "text": "Alcachofas"},
+                {"value": "Almejas", "text": "Almejas"},
+                {"value": "Almendras", "text": "Almendras"},
+                {"value": "Alubias rojas/blancas", "text": "Alubias rojas/blancas"},
+                {"value": "Anchoas en aceite en conserva", "text": "Anchoas en aceite en conserva"},
+                {"value": "Apio", "text": "Apio"},
+                {"value": "Arándanos", "text": "Arándanos"},
+                {"value": "Arroz blanco", "text": "Arroz blanco"},
+                {"value": "Arroz con leche", "text": "Arroz con leche"},
+                {"value": "Arroz integral", "text": "Arroz integral"},
+                {"value": "Atún crudo", "text": "Atún crudo"},
+                {"value": "Atún en aceite en conserva", "text": "Atún en aceite en conserva"},
+                {"value": "Atún en conserva al natural", "text": "Atún en conserva al natural"},
+                {"value": "Avellanas", "text": "Avellanas"},
+                {"value": "Azúcar blanca", "text": "Azúcar blanca"},
+                {"value": "Azúcar morena", "text": "Azúcar morena"},
+                {"value": "Bacalao fresco filete", "text": "Bacalao fresco filete"},
+                {"value": "Berberchos en conserva al natural", "text": "Berberchos en conserva al natural"},
+                {"value": "Berenjena", "text": "Berenjena"},
+                {"value": "Bollo de leche", "text": "Bollo de leche"},
+                {"value": "Brócoli", "text": "Brócoli"},
+                {"value": "Cacahuetes", "text": "Cacahuetes"},
+                {"value": "Cacao soluble en polvo", "text": "Cacao soluble en polvo"},
+                {"value": "Calabacín", "text": "Calabacín"},
+                {"value": "Calabaza", "text": "Calabaza"},
+                {"value": "Calamares", "text": "Calamares"},
+                {"value": "Cangrejo del río", "text": "Cangrejo del río"},
+                {"value": "Carambola", "text": "Carambola"},
+                {"value": "Caramelos sabor frutas", "text": "Caramelos sabor frutas"},
+                {"value": "Carne picada sazonada cruda", "text": "Carne picada sazonada cruda"},
+                {"value": "Cebolla", "text": "Cebolla"},
+                {"value": "Cerdo chuletas con grasa visible cruda", "text": "Cerdo chuletas con grasa visible cruda"},
+                {"value": "Cerezas", "text": "Cerezas"},
+                {"value": "Champiñones", "text": "Champiñones"},
+                {"value": "Chorizo", "text": "Chorizo"},
+                {"value": "Ciruela seca con hueso", "text": "Ciruela seca con hueso"},
+                {"value": "Ciruelas", "text": "Ciruelas"},
+                {"value": "Clara de huevo", "text": "Clara de huevo"},
+                {"value": "Coco fresco crudo", "text": "Coco fresco crudo"},
+                {"value": "Coco seco", "text": "Coco seco"},
+                {"value": "Col repollo", "text": "Col repollo"},
+                {"value": "Coles de bruselas", "text": "Coles de bruselas"},
+                {"value": "Coliflor", "text": "Coliflor"},
+                {"value": "Coliflor congelada", "text": "Coliflor congelada"},
+                {"value": "Conejo entero crudo", "text": "Conejo entero crudo"},
+                {"value": "Confitura de fruta baja en calorías", "text": "Confitura de fruta baja en calorías"},
+                {"value": "Corazón de vaca/buey crudo", "text": "Corazón de vaca/buey crudo"},
+                {
+                    "value": "Cordero chuletas/ costilla con grasa crudo",
+                    "text": "Cordero chuletas/ costilla con grasa crudo"
+                },
+                {"value": "Cordero paletilla sin grasa cruda", "text": "Cordero paletilla sin grasa cruda"},
+                {"value": "Cordero sin pierna con grasa cruda", "text": "Cordero sin pierna con grasa cruda"},
+                {"value": "Costilla de tenera cruda", "text": "Costilla de tenera cruda"},
+                {"value": "Croissant", "text": "Croissant"},
+                {"value": "Escarola", "text": "Escarola"},
+                {"value": "Espárrago blanco en conserva", "text": "Espárrago blanco en conserva"},
+                {"value": "Espárrago fresco pelado", "text": "Espárrago fresco pelado"},
+                {"value": "Espinacas", "text": "Espinacas"},
+                {"value": "Flan de huevo", "text": "Flan de huevo"},
+                {"value": "Flan de vainilla", "text": "Flan de vainilla"},
+                {"value": "Frambuesa", "text": "Frambuesa"},
+                {"value": "Fresa/fresón", "text": "Fresa/fresón"},
+                {"value": "Gamba roja cruda", "text": "Gamba roja cruda"},
+                {"value": "Garbanzos", "text": "Garbanzos"},
+                {"value": "Granada", "text": "Granada"},
+                {"value": "Guisante congelado", "text": "Guisante congelado"},
+                {"value": "Guisante en conserva", "text": "Guisante en conserva"},
+                {"value": "Guisante fresco", "text": "Guisante fresco"},
+                {"value": "Harina de trigo", "text": "Harina de trigo"},
+                {"value": "Harina de trigo integral", "text": "Harina de trigo integral"},
+                {"value": "Hígado de cordero crudo", "text": "Hígado de cordero crudo"},
+                {"value": "Hígado de pollo crudo", "text": "Hígado de pollo crudo"},
+                {"value": "Higo seco", "text": "Higo seco"},
+                {"value": "Higos", "text": "Higos"},
+                {"value": "Huevo de gallina entero crudo", "text": "Huevo de gallina entero crudo"},
+                {"value": "Jamón cocido magro/york", "text": "Jamón cocido magro/york"},
+                {"value": "Jamón curado con grasa", "text": "Jamón curado con grasa"},
+                {"value": "Jamón curado sin grasa", "text": "Jamón curado sin grasa"},
+                {"value": "Kiwi", "text": "Kiwi"},
+                {"value": "Langosta cruda", "text": "Langosta cruda"},
+                {"value": "Langostino crudo", "text": "Langostino crudo"},
+                {"value": "Leche condensada entera con azúcar", "text": "Leche condensada entera con azúcar"},
+                {"value": "Leche de cabra", "text": "Leche de cabra"},
+                {"value": "Leche entera pausterizada", "text": "Leche entera pausterizada"},
+                {"value": "Leche semidesnatada pasteurizada", "text": "Leche semidesnatada pasteurizada"},
+                {"value": "Lechuga", "text": "Lechuga"},
+                {"value": "Lengua de tenera cruda", "text": "Lengua de tenera cruda"},
+                {"value": "Lenguado", "text": "Lenguado"},
+                {"value": "Lentejas", "text": "Lentejas"},
+                {"value": "Lomo de cerdo crudo", "text": "Lomo de cerdo crudo"},
+                {"value": "Lomo embuchado", "text": "Lomo embuchado"},
+                {"value": "Maíz en mazorca congelado", "text": "Maíz en mazorca congelado"},
+                {"value": "Maíz hervido en lata", "text": "Maíz hervido en lata"},
+                {"value": "Mandarina", "text": "Mandarina"},
+                {"value": "Mango pleado troceado", "text": "Mango pleado troceado"},
+                {"value": "Manteca de cerdo", "text": "Manteca de cerdo"},
+                {"value": "Mantequilla", "text": "Mantequilla"},
+                {"value": "Manzana", "text": "Manzana"},
+                {"value": "Margarina light", "text": "Margarina light"},
+                {"value": "Margarina vegetal enriquecida", "text": "Margarina vegetal enriquecida"},
+                {"value": "Mayonesa comercial de aceite de oliva", "text": "Mayonesa comercial de aceite de oliva"},
+                {"value": "Mayonesa light", "text": "Mayonesa light"},
+                {"value": "Mejillón crudo", "text": "Mejillón crudo"},
+                {"value": "Melocotón", "text": "Melocotón"},
+                {"value": "Melocotón el almíbar", "text": "Melocotón el almíbar"},
+                {"value": "Melocotón seco", "text": "Melocotón seco"},
+                {"value": "Melón", "text": "Melón"},
+                {"value": "Membrillo", "text": "Membrillo"},
+                {"value": "Miel", "text": "Miel"},
+                {"value": "Moras", "text": "Moras"},
+                {"value": "Morcilla", "text": "Morcilla"},
+                {"value": "Mortadela", "text": "Mortadela"},
+                {"value": "Nabos", "text": "Nabos"},
+                {"value": "Naranja", "text": "Naranja"},
+                {"value": "Nectarina", "text": "Nectarina"},
+                {"value": "Nísperos", "text": "Nísperos"},
+                {"value": "Nueces", "text": "Nueces"},
+                {"value": "Ostra cruda", "text": "Ostra cruda"},
+                {"value": "Palmito en conserva", "text": "Palmito en conserva"},
+                {"value": "Palomitas de maíz (con aceite y sal)", "text": "Palomitas de maíz (con aceite y sal)"},
+                {
+                    "value": "Palomitas de maíz (sin aceite y sin sal)",
+                    "text": "Palomitas de maíz (sin aceite y sin sal)"
+                },
+                {"value": "Pan de pasas", "text": "Pan de pasas"},
+                {"value": "Pan integral de barra", "text": "Pan integral de barra"},
+                {"value": "Pan rallado", "text": "Pan rallado"},
+                {"value": "Panceta de cerdo", "text": "Panceta de cerdo"},
+                {"value": "Papaya pelada y troceada", "text": "Papaya pelada y troceada"},
+                {"value": "Pasas secas", "text": "Pasas secas"},
+                {"value": "Pastas de té", "text": "Pastas de té"},
+                {"value": "Pastel de chocolate", "text": "Pastel de chocolate"},
+                {"value": "Patata cruda", "text": "Patata cruda"},
+                {"value": "Patatas chips light", "text": "Patatas chips light"},
+                {"value": "Paté de hígado de cerdo en conserva", "text": "Paté de hígado de cerdo en conserva"},
+                {"value": "Pepino", "text": "Pepino"},
+                {"value": "Pera", "text": "Pera"},
+                {"value": "Pimiento colores", "text": "Pimiento colores"},
+                {"value": "Pimiento rojo", "text": "Pimiento rojo"},
+                {"value": "Pimiento verde", "text": "Pimiento verde"},
+                {"value": "Piña sin piel", "text": "Piña sin piel"},
+                {"value": "Piñones", "text": "Piñones"},
+                {"value": "Pistachos salados", "text": "Pistachos salados"},
+                {"value": "Plátano", "text": "Plátano"},
+                {"value": "Pollo muslo sin piel crudo", "text": "Pollo muslo sin piel crudo"},
+                {"value": "Pollo pechuga sin piel cruda", "text": "Pollo pechuga sin piel cruda"},
+                {"value": "Puerro", "text": "Puerro"},
+                {"value": "Pulpo crudo", "text": "Pulpo crudo"},
+                {"value": "Queso azul", "text": "Queso azul"},
+                {"value": "Queso Cheddar", "text": "Queso Cheddar"},
+                {"value": "Queso de cabra crudo", "text": "Queso de cabra crudo"},
+                {"value": "Queso en porciones", "text": "Queso en porciones"},
+                {"value": "Queso fresco de cabra", "text": "Queso fresco de cabra"},
+                {"value": "Rábano", "text": "Rábano"},
+                {"value": "Salami", "text": "Salami"},
+                {"value": "Salchichón", "text": "Salchichón"},
+                {"value": "Salmón crudo", "text": "Salmón crudo"},
+                {"value": "Salsa concetrada de tomate comercial", "text": "Salsa concetrada de tomate comercial"},
+                {"value": "Sandía", "text": "Sandía"},
+                {"value": "Sardina cruda", "text": "Sardina cruda"},
+                {"value": "Sardinas en aceite en conserva", "text": "Sardinas en aceite en conserva"},
+                {"value": "Tapioca", "text": "Tapioca"},
+                {
+                    "value": "Tarta de manzana (pasta brisa y crema inglesa)",
+                    "text": "Tarta de manzana (pasta brisa y crema inglesa)"
+                },
+                {"value": "Ternera entrecot sin grasa crudo", "text": "Ternera entrecot sin grasa crudo"},
+                {"value": "Ternera solomillo crudo sin grasa", "text": "Ternera solomillo crudo sin grasa"},
+                {"value": "Tocino de cerdo", "text": "Tocino de cerdo"},
+                {"value": "Tomate maduro crudo", "text": "Tomate maduro crudo"},
+                {"value": "Tomate pelado triturado en conserva", "text": "Tomate pelado triturado en conserva"},
+                {"value": "Trigo hinchado desayuno", "text": "Trigo hinchado desayuno"},
+                {"value": "Uvas blancas", "text": "Uvas blancas"},
+                {"value": "Uvas negras", "text": "Uvas negras"},
+                {"value": "Vaca/buey bistec a la plancha", "text": "Vaca/buey bistec a la plancha"},
+                {"value": "Vaca/buey solomillo a la plancha", "text": "Vaca/buey solomillo a la plancha"},
+                {"value": "Yogur entero aromatizado sabor", "text": "Yogur entero aromatizado sabor"},
+                {"value": "Yogur entero con frutas", "text": "Yogur entero con frutas"},
+                {"value": "Yogur entero natural azucarado", "text": "Yogur entero natural azucarado"},
+                {"value": "Yogur líquido aromatizado sabores", "text": "Yogur líquido aromatizado sabores"},
+                {"value": "Yogur líquido con frutas", "text": "Yogur líquido con frutas"},
+                {"value": "Yogur líquido natural azucarado", "text": "Yogur líquido natural azucarado"},
+                {"value": "Yogur natural entero", "text": "Yogur natural entero"},
+                {"value": "Zanahoria", "text": "Zanahoria"}
+            ]
+        };
+
+        // Function to populate select elements with options from JSON
+        function populateOptions() {
+            // Iterate over each select element in the table
+            var selectElements = document.querySelectorAll('#td_main select');
+            selectElements.forEach(function (selectElement) {
+                // Clear existing options
+                selectElement.innerHTML = '';
+                // Append each option from JSON data
+                jsonData.options.forEach(function (option) {
+                    var optionElement = document.createElement('option');
+                    optionElement.value = option.value;
+                    optionElement.textContent = option.text;
+                    selectElement.appendChild(optionElement);
+                });
+                // Apply Select2 to each select element
+                $(selectElement).select2({
+                    width: '100%'
+                });
+            });
+        }
+
+        $('#td_main').DataTable( {
+            responsive: true,
+            searching: false, // Oculta el filtro de búsqueda
+            paging: false, // Oculta la paginación
+            lengthChange: false, // Oculta la opción de cambiar el tamaño de página
+            info: false,
+            "order": [], // Deshabilita la ordenación inicial
+            "columnDefs": [
+                { "orderable": false, "targets": 0 } // Deshabilita la ordenación para la primera columna (los días)
+            ]
+        } );
+        // Call the function to populate options initially
+        populateOptions();
+
+
+
+    });
+
+    function calcularCosto() {
+        // Inicializa la variable para almacenar el costo total
+        var costoTotal = 0;
+
+        // Itera sobre los campos de precio de cada día y suma los valores
+        $("input[type='number']").each(function() {
+            // Obtiene el valor del campo de precio y lo convierte a número
+            var precio = parseFloat($(this).val());
+
+            // Verifica si el valor es un número válido
+            if (!isNaN(precio)) {
+                // Suma el precio al costo total
+                costoTotal += precio;
+            }
+        });
+
+        // Convierte el costo total a una cadena con separadores de miles y dos decimales
+        var costoFormateado = costoTotal.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+        // Imprime el costo total en la consola
+        console.log("Costo total:", costoTotal);
+
+        // Actualiza el contenido del elemento con el costo total
+        $("#costoTotal").text("Costo total: Q" + costoFormateado); // Ajusta el formato según lo desees
+    }
+
+
+
+    document.getElementById("calcularCosto").addEventListener("click", function() {
+        calcularCosto();
+    });
+</script>

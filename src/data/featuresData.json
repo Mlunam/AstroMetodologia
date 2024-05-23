@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "Diabetes tipo 1",
+        "content": "En este tipo, el cuerpo no produce insulina, una hormona que ayuda a que la glucosa ingrese a las células para ser utilizada como energía",
+        "align": "right",
+        "image": "/images/tipo1.jpg"
+    },
+    {
+        "id": 2,
+        "title":  "Diabetes tipo 2",
+        "content": "Es la más común. En este tipo, el cuerpo no produce suficiente insulina o no la usa correctamente",
+        "align": "left",
+        "image": "/images/tipo2.png"
+    }
+]

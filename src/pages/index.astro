@@ -1,0 +1,292 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import faqData from "@/data/faqData.json";
+import desayunoData from "../data/desayunoData.json";
+import cenaData from "../data/cenaData.json";
+import almuerzoData from "../data/almuerzoData.json";
+import testimonialData from "@/data/testimonialData.json";
+import featuresData from "@/data/featuresData.json";
+import {Icon} from "astro-icon";
+import Accordion from "@/components/Accordion.astro";
+import HomeBanner from "@/components/HomeBanner.astro";
+import {MotionBTTContainer} from "@/components/motion/MotionBTTContainer";
+import BadgeGroup from "@/components/badge/BadgeGroup.astro";
+import BadgeMessage from "@/components/badge/BadgeMessage.astro";
+import PageTitle from "@/components/PageTitle.astro";
+import Content from "@/components/Content.astro";
+import ContentImage from "@/components/ContentImage.astro";
+import BadgeIcon from "@/components/badge/BadgeIcon.astro";
+import CardGroup from "@/components/card/CardGroup.astro";
+import Card from "@/components/card/Card.astro";
+import CardBody from "@/components/card/CardBody.astro";
+import CardImage from "@/components/card/CardImage.astro";
+import CardHeader from "@/components/card/CardHeader.astro";
+import Column from "@/components/Column.astro";
+import FormIMC from "../components/FormularioIMC.astro";
+import Table from "../components/Table.astro";
+import {Image} from "@astrojs/image/components";
+---
+
+<Layout
+        title="Diabetes: Cuidado y Consejos"
+        description="Diabetes: Cuidado y Consejos"
+>
+    <div class="main-wrapper bg-[#F3F5F8] relative z-10 pb-20 pt-20">
+        <HomeBanner/>
+        <!-- Home Banner -->
+        <SectionContainer class="page-banner--container py-16 p-6">
+
+            <SectionContainer id="information" class="features">
+
+                <PageTitle class="text-center mx-auto" type="default">
+
+                    Que es la diabetes:
+                </PageTitle>
+
+                <Content class="text-left" alignment="center">
+                    <p>
+                        La diabetes es una enfermedad crónica (de larga duración) que afecta la forma en que el cuerpo
+                        convierte los
+                        alimentos en energía.
+                    </p>
+                </Content>
+
+                <br/>
+
+                <Content class="text-left" alignment="center">
+                    <p>
+                        Su cuerpo descompone la mayor parte de los alimentos que come en azúcar (también llamada
+                        glucosa) y los
+                        libera en el torrente sanguíneo. El páncreas produce una hormona llamada insulina, que actúa
+                        como una llave
+                        que permite que el azúcar en la sangre entre a las células del cuerpo para que estas la usen
+                        como energía.
+                    </p>
+                </Content>
+
+                <br/>
+
+                <Content class="text-left" alignment="center">
+                    <p>
+                        Con diabetes, su cuerpo no produce una cantidad suficiente de insulina o no puede usar
+                        adecuadamente la
+                        insulina que produce. Cuando no hay suficiente insulina o las células dejan de responder a la
+                        insulina, queda
+                        demasiada azúcar en el torrente sanguíneo y, con el tiempo, esto puede causar problemas de salud
+                        graves,
+                        como enfermedad del corazón, pérdida de la visión y enfermedad de los riñones.
+                    </p>
+                </Content>
+
+                <br/>
+
+                <PageTitle class="text-center mx-auto" type="default">
+                    síntomas para tomar en cuenta:
+                </PageTitle>
+
+                <Content class="text-left" alignment="center">
+
+                    <ul>
+                        <li>- Aumento de sed y ganas de orinar</li>
+                        <li>- Aumento del apetito</li>
+                        <li>- Fatiga</li>
+                        <li>- Visión borrosa</li>
+                        <li>- Hormigueo en las manos y pies</li>
+                        <li>- Úlceras que no cicatrizan</li>
+                        <li>- Pérdida de peso sin razón</li>
+                        <li>- Cansancio y debilidad</li>
+                    </ul>
+
+                </Content>
+
+                <br/>
+                <br/>
+
+                <PageTitle class="text-center mx-auto" type="default">
+                    Los factores clave del manejo de su diabetes
+                </PageTitle>
+
+                <SectionContainer>
+                    <Content class="text-left" alignment="center">
+                        <h3 class="text-xl mb-2 font-medium text-black">
+                            Prueba A1C:
+                        </h3>
+                        <text>La prueba A1C muestra el nivel promedio de su glucosa en la sangre durante los últimos 3
+                            meses. Debe de ser menor 7.
+                        </text>
+                    </Content>
+                    <br/>
+                    <Content class="text-left" alignment="center">
+                        <h3 class="text-xl mb-2 font-medium text-black">
+                            Presión arterial:
+                        </h3>
+                        <text> La meta de la presión arterial para la mayoría de las personas con diabetes debe ser
+                            menos
+                            de 140/90 mm Hg.
+                        </text>
+                    </Content>
+                    <br/>
+                    <Content class="text-left" alignment="center">
+                        <h3 class="text-xl mb-2 font-medium text-black">
+                            Colesterol:
+                        </h3>
+                        <text>Usted tiene dos tipos de colesterol en la sangre: LDL y HDL. El LDL o colesterol “malo”
+                            puede
+                            acumularse y obstruir los vasos sanguíneos. Demasiado colesterol malo puede causar un ataque
+                            al corazón o
+                            un accidente cerebrovascular. El colesterol HDL o colesterol “bueno” ayuda a eliminar el
+                            colesterol “malo” de
+                            los vasos sanguíneos.
+                        </text>
+                    </Content>
+                    <br/>
+                    <Content class="text-left" alignment="center">
+                        <h3 class="text-xl mb-2 font-medium text-black">
+                            Dejar de fumar:
+                        </h3>
+                        <text>Abstenerse de fumar es especialmente importante para las personas con diabetes porque
+                            tanto este hábito como la diabetes reducen el diámetro de los vasos sanguíneos.
+                        </text>
+                    </Content>
+                    <br/>
+                    <Content class="text-left" alignment="center">
+                        <h3 class="text-xl mb-2 font-medium text-black">
+                            Siga un buen plan de alimentación:
+                        </h3>
+                        <text>Haga un plan de alimentación para la diabetes con la ayuda de su
+                            equipo de atención médica. Seguir este plan le ayudará a controlar su nivel de glucosa en la
+                            sangre, su
+                            presión arterial y su colesterol.
+                        </text>
+                    </Content>
+                    <br/>
+                    <Content class="text-left" alignment="center">
+                        <h3 class="text-xl mb-2 font-medium text-black">
+                            Convierta la actividad física en un hábito:
+                        </h3>
+                        <text>Fíjese la meta de hacer más actividad física. Intente hacer unos
+                            30 minutos o más de ejercicio casi todos los días de la semana.
+                        </text>
+                    </Content>
+                    <br/>
+                    <Content class="text-left" alignment="center">
+                        <h3 class="text-xl mb-2 font-medium text-black">
+                            Tome sus medicinas:
+                        </h3>
+                        <text>Tome sus medicinas para la diabetes y otros problemas de salud, incluso si se siente
+                            bien o si ha alcanzado sus resultados ideales de glucosa en la sangre, presión arterial y
+                            colesterol.
+                        </text>
+                    </Content>
+                </SectionContainer>
+
+
+            </SectionContainer>
+
+
+            <SectionContainer id="testimonials" class="benefits">
+
+                <PageTitle class="" type="default">
+                    Aportes de médicos sobre la diabetes a través de la historia
+                </PageTitle>
+                <Column columnData={testimonialData}/>
+            </SectionContainer>
+
+            <SectionContainer id="dieta" class="benefits">
+
+                <PageTitle class="" type="default">
+                    Dietas
+                </PageTitle>
+
+
+                <PageTitle class="text-center mx-auto" type="default">
+                    Desayuno
+                </PageTitle>
+
+                <Accordion accordionData={desayunoData}/>
+
+                <PageTitle class="text-center mx-auto" type="default">
+                    Almuerzo
+                </PageTitle>
+
+                <Accordion accordionData={almuerzoData}/>
+
+                <PageTitle class="text-center mx-auto" type="default">
+                    Cena
+                </PageTitle>
+
+                <Accordion accordionData={cenaData}/>
+
+                <SectionContainer>
+                    <div class="page-banner--image">
+                        <Image
+                                src={"/images/img.png"}
+                                width={1024}
+                                height={680}
+                                alt={"Page Banner"}
+                                objectFit={"cover"}
+                                aspectRatio={16 / 9}
+                                format={"webp"}
+                                class="mx-auto"
+                        />
+                    </div>
+
+                </SectionContainer>
+                <br/>
+                <br/>
+
+                <Table></Table>
+            </SectionContainer>
+
+            <SectionContainer id="encuesta" class="benefits">
+
+                <PageTitle class="" type="default">
+                    Encuesta
+                </PageTitle>
+                 Apoyanos dejando tus comentarios sobre la página, esto nos ayudará mucho.
+
+                <Content class="text-center" alignment="center">
+                    <iframe width="640px" height="480px" src="https://docs.google.com/forms/d/e/1FAIpQLSeUJ3rxN8MRFdczVHOhepeESH9tf64R6vSmnAwe9HVTas1iWw/viewform?usp=sf_link"
+                            frameborder="0" marginwidth="0" marginheight="0"
+                            style="border: none; max-width:100%; max-height:100vh"
+                            allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
+                </Content>
+
+
+            </SectionContainer>
+
+            <!-- Testimonials -->
+            <SectionContainer id="faq" class="faq">
+                <BadgeGroup alignment="center">
+
+                </BadgeGroup>
+                <PageTitle class="text-center mx-auto" type="default">
+                    Preguntas frecuentes
+                    <br/>
+                    <br/>
+                    ¡No hay problema! Tenemos las respuestas que necesita:
+                </PageTitle>
+                <Accordion accordionData={faqData}/>
+            </SectionContainer>
+
+            <SectionContainer id="calculator" class="features">
+
+
+                <PageTitle class="text-center mx-auto" type="default">
+                    Calcular Índice de masa corporal
+                    <br/>
+                    <br/>
+                </PageTitle>
+
+                <Content class="text-center" alignment="center">
+                    <FormIMC>
+
+                    </FormIMC>
+                </Content>
+            </SectionContainer>
+        </SectionContainer>
+    </div>
+    <!-- FAQ -->
+</Layout>
+<!-- Components Container -->
